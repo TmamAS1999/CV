@@ -1,0 +1,665 @@
+body {
+    margin: 0;
+    font-weight: 100;
+    background: #f09696; /* Use a solid red color */
+    overflow-y: auto;
+    -webkit-animation: fadeIn 1s ease-out;
+    -moz-animation: fadeIn 1s ease-out;
+    -o-animation: fadeIn 1s ease-out;
+    animation: fadeIn 1s ease-out;
+}
+
+@media only screen and (max-width: 768px) {
+    .content {
+        padding: 20px;
+        border-radius: 8px;
+    }
+}
+
+.loader , .loaderr {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+}  
+
+.loaderr {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999; /* Set a high z-index to ensure it appears on top */
+
+}
+
+.loader span {
+    position: relative;
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    animation: animate 2s ease-in-out infinite;
+    display: inline-block;
+    animation-delay: calc(0.1s * var(--z));
+}
+
+.loaderr span {
+    position: relative;
+    font-size: 2em;
+    color: #ffffff;
+    animation: animate 2s ease-in-out infinite;
+    display: inline-block;
+    animation-delay: calc(0.1s * var(--z));
+}
+
+@keyframes animate {
+    0%, 40%, 100% {
+        transform: translateY(0px);
+    }
+
+    20% {
+        transform: translateY(-50px);
+        filter: drop-shadow(0 0 20px #ff0000);
+        box-shadow: 0 30px 0 #ff0055, 0 -30px 0 #ff0000;
+    }
+}
+
+.light {
+    position: absolute;
+    width: 0;
+    opacity: 0.75;
+    background-color: rgb(0, 0, 0);
+    box-shadow: #e60d43 0 0 20px 2px;
+    opacity: 0;
+    top: 100vh;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.x1 {
+    -webkit-animation: floatUp 4s infinite linear;
+    -moz-animation: floatUp 4s infinite linear;
+    -o-animation: floatUp 4s infinite linear;
+    animation: floatUp 4s infinite linear;
+    -webkit-transform: scale(1.0);
+    -moz-transform: scale(1.0);
+    -o-transform: scale(1.0);
+    transform: scale(1.0);
+}
+
+.x2 {
+    -webkit-animation: floatUp 7s infinite linear;
+    -moz-animation: floatUp 7s infinite linear;
+    -o-animation: floatUp 7s infinite linear;
+    animation: floatUp 7s infinite linear;
+    -webkit-transform: scale(1.6);
+    -moz-transform: scale(1.6);
+    -o-transform: scale(1.6);
+    transform: scale(1.6);
+    left: 15%;
+}
+
+.x3 {
+    -webkit-animation: floatUp 2.5s infinite linear;
+    -moz-animation: floatUp 2.5s infinite linear;
+    -o-animation: floatUp 2.5s infinite linear;
+    animation: floatUp 2.5s infinite linear;
+    -webkit-transform: scale(.5);
+    -moz-transform: scale(.5);
+    -o-transform: scale(.5);
+    transform: scale(.5);
+    left: -15%;
+}
+
+.x4 {
+    -webkit-animation: floatUp 4.5s infinite linear;
+    -moz-animation: floatUp 4.5s infinite linear;
+    -o-animation: floatUp 4.5s infinite linear;
+    animation: floatUp 4.5s infinite linear;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+    left: -34%;
+}
+
+.x5 {
+    -webkit-animation: floatUp 8s infinite linear;
+    -moz-animation: floatUp 8s infinite linear;
+    -o-animation: floatUp 8s infinite linear;
+    animation: floatUp 8s infinite linear;
+    -webkit-transform: scale(2.2);
+    -moz-transform: scale(2.2);
+    -o-transform: scale(2.2);
+    transform: scale(2.2);
+    left: -57%;
+}
+
+.x6 {
+    -webkit-animation: floatUp 3s infinite linear;
+    -moz-animation: floatUp 3s infinite linear;
+    -o-animation: floatUp 3s infinite linear;
+    animation: floatUp 3s infinite linear;
+    -webkit-transform: scale(.8);
+    -moz-transform: scale(.8);
+    -o-transform: scale(.8);
+    transform: scale(.8);
+    left: -81%;
+}
+
+.x7 {
+    -webkit-animation: floatUp 5.3s infinite linear;
+    -moz-animation: floatUp 5.3s infinite linear;
+    -o-animation: floatUp 5.3s infinite linear;
+    animation: floatUp 5.3s infinite linear;
+    -webkit-transform: scale(3.2);
+    -moz-transform: scale(3.2);
+    -o-transform: scale(3.2);
+    transform: scale(3.2);
+    left: 37%;
+}
+
+.x8 {
+    -webkit-animation: floatUp 4.7s infinite linear;
+    -moz-animation: floatUp 4.7s infinite linear;
+    -o-animation: floatUp 4.7s infinite linear;
+    animation: floatUp 4.7s infinite linear;
+    -webkit-transform: scale(1.7);
+    -moz-transform: scale(1.7);
+    -o-transform: scale(1.7);
+    transform: scale(1.7);
+    left: 62%;
+}
+
+.x9 {
+    -webkit-animation: floatUp 4.1s infinite linear;
+    -moz-animation: floatUp 4.1s infinite linear;
+    -o-animation: floatUp 4.1s infinite linear;
+    animation: floatUp 4.1s infinite linear;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transform: scale(0.9);
+    left: 85%;
+}
+
+@keyframes floatUp {
+    0% {
+        top: 100vh;
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    50% {
+        top: 0vh;
+        opacity: .8;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        top: -100vh;
+        opacity: 0;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+/* ***************************** CARD 1 STYLING ***************************** */
+
+.card {
+    transition: transform 10s ease-in-out;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Add space between cards */
+.container {
+    top: 350px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.containerS {
+    top: 10px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* Add a hover effect to the cards for zooming and scrolling */
+.card-1:hover, .card-2:hover {
+    transform: scale(1.1);
+    overflow-y: auto;
+    max-height: 500px; /* You can adjust the max-height as needed */
+}
+/* Add a hover effect to the cards for zooming and scrolling */
+.card-1:hover, .card-2:hover {
+    transform: scale(1.1);
+    overflow-y: auto;
+    max-height: 500px; /* You can adjust the max-height as needed */
+}
+
+/* Position cards absolutely */
+.card-1, .card-2 {
+    position: absolute;
+    width: 100%; /* Make the cards full width */
+    left: 0;
+}
+
+/* Add a transition effect for a smooth animation */
+.card-1, .card-2 {
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 270px;
+    min-width: 250px;
+    width: 470px;
+    background: #fff;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 30px;
+    position: relative;
+    background: linear-gradient(to right, #000000, #434343);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.card-1 .content{
+    margin-top: 5px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-left: 10px;
+}
+
+
+.card-1 .heading{
+    font-size: 2.0rem;
+    transition: 0.4s;
+    color: #8796a4b8;
+}
+
+.card-1:hover .heading{
+    font-size: 2.8rem;
+    color: #6f7a85;
+}
+
+.card-1 .para{
+    margin-top: 15px;
+    width: 235px;
+    font-size: 1.2rem;
+    transition: 0.4s;
+    opacity: 0;
+    color: #88919b;
+}
+
+.card-1:hover .para{
+    opacity: 1;
+}
+
+.card-1 img{
+    position: absolute;
+    top: 15%;
+    left: 45%;
+    width: 200px;
+    height: auto;
+    transition: 0.4s;
+}
+
+.card-1:hover img{
+    top: -30%;
+    left: 49%;
+    scale: 110%;
+}
+
+/* ***************************** CARD 2 STYLING ***************************** */
+
+.card-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 270px;
+    min-width: 250px;
+    width: 470px;
+    background: #fff;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 30px;
+    position: relative;
+    background: linear-gradient(to right, #030a1c, #532c2c);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.card-2 .content{
+    margin-top: 5px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-left: 10px;
+}
+
+
+.card-2 .heading{
+    font-size: 2.2rem;
+    transition: 0.4s;
+    color: #8796a4b8;
+    pointer-events: none;
+}
+
+.card-2:hover .heading{
+    font-size: 2.8rem;
+    color: #8796a4;
+}
+
+.card-2 .para{
+    margin-top: 15px;
+    width: 235px;
+    font-size: 1.2rem;
+    transition: 0.4s;
+    opacity: 0;
+    color: #88919b;
+}
+
+.card-2:hover .para{
+    opacity: 1;
+}
+
+.card-2 img{
+    position: absolute;
+    top: 15%;
+    left: 46%;
+    width: 200px;
+    height: auto;
+    transition: 0.4s;
+}
+
+.card-2:hover img{
+    top: -30%;
+    left: 64%;
+    scale: 110%;
+}
+
+h2{
+    position: relative;
+    top: 25%;
+    left: -39%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+}
+
+html{
+    font-family: 'Roboto Slab', serif;
+    line-height: 1.6;
+}
+
+.card__1{
+    position: relative;
+    width: 350px;
+    height:280px;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.card-color__1{
+    background: #e6dfff;
+}
+
+.card-color__2{
+    background: #dde7c7;
+}
+
+.image{
+    filter: grayscale(1);
+    position: absolute;
+    left: 18%;
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 30px;
+    margin: 0 auto;
+    transition: all 1s ease;
+    animation: anim2 1s forwards;
+}
+
+.card__1:hover .image{
+    animation: anim 1s forwards;
+}
+
+@keyframes anim{
+    0%{
+        top: 0;
+        filter: blur(2px);
+        opacity: 0.5;
+        filter: grayscale(1);
+    }
+    100%{
+        top: -40%;
+        filter: grayscale(0);
+    }
+}
+
+@keyframes anim2{
+    0%{
+        top: -40%;
+        filter: blur(2px);
+        opacity: 0.5;
+    }
+    100%{
+        top: 0;
+    }
+}
+
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 30px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+/* *************************** content **************************** */
+.content {
+    padding: 5%; /* Adjust padding to your preference */
+    position: absolute;
+    top: 225px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card__1:hover .content{
+    animation: anim3 1s forwards;
+}
+
+@keyframes anim3{
+    0%{
+        top: 75%;
+        left: 17%;
+    }
+    100%{
+        top: 43%;
+        left: 17%;
+    }
+}
+
+
+.content h1{
+    position: absolute;
+    width: 100%;
+    top: 0%;
+    left: 30%;
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #2f3e46;
+    text-shadow: 0px -2px 1px rgba(0, 0, 0, 1);
+}
+
+
+.card__1:hover .content h1{
+    display: none;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.content h2{
+    font-size: 2.0rem;
+    font-weight: 700;
+    display: none;
+    color: #354f52;
+    text-transform: uppercase;
+    text-shadow: 0px -1px 1px rgba(21, 28, 32, 1);
+    letter-spacing: 0.1em;
+}
+
+.card__1:hover .content h2{
+    display: block;
+}
+
+.content .btn{
+    display: none;
+    padding: 0.3rem 0.8rem;
+    border: 1px solid #2f3e46;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.4rem;
+    color: #2f3e46;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    transition: 0.5s;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.content .btn:hover{
+    background: #2f3e46;
+    color: #f5f5f5;
+}
+
+.card__1:hover .content .btn{
+    display: inline-block;
+}
+
+/* ************************** Social Icon ************************** */
+
+.social{
+    margin: 10px;
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.social i{
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.card__1:hover .social{
+    opacity: 1 !important;
+}
+
+.social .fa-github {
+    color: #3e2d58;
+    padding: 0.7rem 0.72rem;
+    border-radius: 50%;
+    border: 1px solid #3e2d58;
+    transition: all 0.3s ease;
+}
+
+.social .fa-github:hover {
+    margin-top: -8px;
+    color: #f5f5f5;
+    background: #3e2d58;
+    border: 1px solid #fff;
+}
+/* ... (your existing CSS) ... */
+
+.social .fa-phone-alt {
+    color: #00bcd4;
+    padding: 0.7rem;
+    border-radius: 50%;
+    border: 1px solid #00bcd4;
+    transition: all 0.3s ease;
+}
+.social .fa-phone-alt:hover {
+    margin-top: -8px;
+    color: #f5f5f5;
+    background: #00bcd4;
+    border: 1px solid #fff;
+}
+
+.social .fa-envelope {
+    color: #d9534f;
+    padding: 0.7rem;
+    border-radius: 50%;
+    border: 1px solid #d9534f;
+    transition: all 0.3s ease;
+}
+.social .fa-envelope:hover {
+    margin-top: -8px;
+    color: #f5f5f5;
+    background: #d9534f;
+    border: 1px solid #fff;
+}
+
+.social .fa-linkedin {
+    color: #0077b5;
+    padding: 0.7rem;
+    border-radius: 50%;
+    border: 1px solid #0077b5;
+    transition: all 0.3s ease;
+}
+.social .fa-linkedin:hover {
+    margin-top: -8px;
+    color: #f5f5f5;
+    background: #0077b5;
+    border: 1px solid #fff;
+}
